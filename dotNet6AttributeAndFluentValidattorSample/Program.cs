@@ -1,4 +1,4 @@
-using Microsoft.Extensions.Options;
+using FluentValidation.AspNetCore;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen(options => {
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
+
+//FluentValidation³]©w
+builder.Services.AddFluentValidationAutoValidation();
 
 var app = builder.Build();
 

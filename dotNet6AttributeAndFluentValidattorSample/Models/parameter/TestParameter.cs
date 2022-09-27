@@ -1,5 +1,6 @@
 ﻿namespace DotNet6AttributeAndFluentValidationSample.Models.parameter
 {
+
     /// <summary>
     /// 測試用參數
     /// </summary>

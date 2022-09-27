@@ -1,5 +1,7 @@
+using DotNet6AttributeAndFluentValidationSample.Infrastructure.Attribute;
 using DotNet6AttributeAndFluentValidationSample.Models.parameter;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata;
 
 namespace dotNet6AttributeAndFluentValidattorSample.Controllers
 {
@@ -39,10 +41,13 @@ namespace dotNet6AttributeAndFluentValidattorSample.Controllers
         /// 代刚FluentValidation
         /// </summary>
         /// <param name="parameter">代刚把计</param>
-        [HttpGet("TestFluentValidation")]
-        public void TestFluentValidation(TestParameter parameter)
+        [HttpPost("TestFluentValidation")]
+        [TestParameter()]
+        public string TestFluentValidation(TestParameter parameter)
         {
- 
+            var str = "00123";
+
+            return str;
         }
     }
 }
